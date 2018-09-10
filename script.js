@@ -9,10 +9,15 @@
 // Once he guesses it correctly, end the loop.
 // Hint: What's the difference between a do-while loop and a while loop?
 
+// var randomInteger = Math.floor((Math.random() * 10) + 1)
+// var guessInteger = prompt("Guess the integer");
+
+// do {
+// 	guessInteger = prompt("You guessed wrongly! Guess the number again!")
+// } while (parseInt(guessInteger) !== randomInteger);
 
 
-
-
+// alert("Congratulations your guess is correct. The Random number is " + randomInteger);
 
 
 // Exercise 2: Reversing a String
@@ -20,11 +25,14 @@
 // Write a function that takes a string as an argument and returns its reverse. For example, reverseString("abc defg")
 // should return "gfed cba".
 
-
-
-
-
-
+// var enteredString = prompt("What string do you want to reverse?")
+// var reverseString = function(str) {
+// 	var splitString = str.split("");
+// 	var reverseStringArray = splitString.reverse();
+// 	var joinString = reverseStringArray.join("");
+// 	return joinString;
+// }
+// alert(reverseString(enteredString));
 
 
 // Exercise 3
@@ -37,8 +45,33 @@ var numArray = [3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94,
 // 3. return the sum up all the elements of the input array, e.g. sum([1,2,3]) should return 6
 // 4. return an array with only odd numbers from the input array, e.g. onlyOdd([1,2,3,4,5]) should return [1,3,5]
 // 5. (Bonus) return an array where each element in this new array is the sum of the element before it and the element in its current position in the old array, e.g. the first few elements in this new array would be `[3, 12, 11, 7, 8, ...]`
+var reverseArray = function(arr) {
+    arr.reverse();
+    return reverseArray;
+}
+// Double Function Here
+var doubleArray = function(array2) {
+    var multiplyTwo = array2.map(function by2(x) { return x * 2 }); // array2.map(x => x * 2 });
+    return multiplyTwo;
+}
+console.log(doubleArray(numArray));
+// Part 3
+var sumArray = function(arr) {
+    var total = arr.reduce(function(sum, num) {
+        return sum + num
+    });
+    return total;
+}
+console.log(sumArray(numArray))
 
-
+// Part 4
+var oddNumbers = function(value) {
+    return ((value % 2) === 1)
+}
+var onlyOdd = function(arr) {
+    return arr.filter(oddNumbers)
+}
+console.log(onlyOdd(numArray))
 
 
 
@@ -49,14 +82,14 @@ var numArray = [3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94,
 // Examine the phonebook below.
 // Write a function that takes an object, e.g. Phonebook, that uses a loop to return an object with keys and values swapped.
 var Phonebook = {
-    "Aaron":    92133243,
-    "Betty":    91120543,
-    "Cammy":    85535657,
-    "Denise":   64122423,
-    "Emma":     64485690,
-    "Felicia":  83323669,
-    "George":   98119091,
-    "Herman":   63436894,
+    "Aaron": 92133243,
+    "Betty": 91120543,
+    "Cammy": 85535657,
+    "Denise": 64122423,
+    "Emma": 64485690,
+    "Felicia": 83323669,
+    "George": 98119091,
+    "Herman": 63436894,
 };
 
 
@@ -128,12 +161,3 @@ var testArray = ["Alice", "Bobby", "Charles", "Daniel", "Elise", "Farnsworth", "
 // ..*..
 // .*.*.
 // *****
-
-
-
-
-
-
-
-
-
